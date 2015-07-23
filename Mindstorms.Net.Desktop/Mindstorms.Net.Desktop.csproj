@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8F377E5-5A6A-45CF-BFE8-B99A257FAD2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mindstorms.Net.Desktop</RootNamespace>
+    <AssemblyName>Mindstorms.Net.Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>%24/Mindstorms/Mindstorms.NET/Mindstorms.Net.Desktop</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://azuros.visualstudio.com/defaultcollection</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Mindstorms.Net.Core\Commands\CommandsBase.cs">
+      <Link>Core\CommandsBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Commands\ConnectionCommands.cs">
+      <Link>Core\ConnectionCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Commands\ConnectionCommandsInternal.cs">
+      <Link>Core\ConnectionCommandsInternal.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Commands\DirectCommands.cs">
+      <Link>Core\DirectCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Commands\DirectCommandsInternal.cs">
+      <Link>Core\DirectCommandsInternal.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Commands\SystemCommands.cs">
+      <Link>Core\SystemCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Commands\SystemCommandsInternal.cs">
+      <Link>Core\SystemCommandsInternal.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\CommandType.cs">
+      <Link>Core\CommandType.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Error.cs">
+      <Link>Core\Error.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\FileTypeExtension.cs">
+      <Link>Core\FileTypeExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\FindFileResponse.cs">
+      <Link>Core\FindFileResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\GetDeviceInfoResponse.cs">
+      <Link>Core\GetDeviceInfoResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\GetFirmwareVersionResponse.cs">
+      <Link>Core\GetFirmwareVersionResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\GetInputValuesResponse.cs">
+      <Link>Core\GetInputValuesResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\GetOutputStateResponse.cs">
+      <Link>Core\GetOutputStateResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Interfaces\ICommunication.cs">
+      <Link>Interfaces\ICommunication.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Interfaces\IPollable.cs">
+      <Link>Interfaces\IPollable.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\LowSpeedReadResponse.cs">
+      <Link>Core\LowSpeedReadResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\MessageReadResponse.cs">
+      <Link>Core\MessageReadResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\MotorModes.cs">
+      <Link>Core\MotorModes.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\MotorPort.cs">
+      <Link>Core\MotorPort.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\MotorRegulationMode.cs">
+      <Link>Core\MotorRegulationMode.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\MotorRunState.cs">
+      <Link>Core\MotorRunState.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\NxtBrick.cs">
+      <Link>Core\NxtBrick.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\NxtCommands.cs">
+      <Link>Core\NxtCommands.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\OpenDataAppendResponse.cs">
+      <Link>Core\OpenDataAppendResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\OpenReadResponse.cs">
+      <Link>Core\OpenReadResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\PollCommandBuffer.cs">
+      <Link>Core\PollCommandBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\PollCommandLengthResponse.cs">
+      <Link>Core\PollCommandLengthResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\PollCommandResponse.cs">
+      <Link>Core\PollCommandResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\ReadResponse.cs">
+      <Link>Core\ReadResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\RequestTelegram.cs">
+      <Link>Core\RequestTelegram.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\ResponseBase.cs">
+      <Link>Core\ResponseBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\ResponseReceivedEventArgs.cs">
+      <Link>Core\ResponseReceivedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\ResponseTelegram.cs">
+      <Link>Core\ResponseTelegram.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\SensorMode.cs">
+      <Link>Core\SensorMode.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\SensorPort.cs">
+      <Link>Core\SensorPort.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Sensors\DigitalSensor.cs">
+      <Link>Sensors\DigitalSensor.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Sensors\NoSensor.cs">
+      <Link>Sensors\NoSensor.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Sensors\Nxt\ColorChangedEventArgs.cs">
+      <Link>Sensors\Nxt\ColorChangedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Sensors\Nxt\ColorSensor.cs">
+      <Link>Sensors\Nxt\ColorSensor.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Sensors\Nxt\ColorSensorMode.cs">
+      <Link>Sensors\Nxt\ColorSensorMode.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Sensors\Nxt\SensorColor.cs">
+      <Link>Sensors\Nxt\SensorColor.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Sensors\Nxt\TouchSensor.cs">
+      <Link>Sensors\Nxt\TouchSensor.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Sensors\Nxt\UltraSonicSensor.cs">
+      <Link>Sensors\Nxt\UltraSonicSensor.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Sensors\SensorBase.cs">
+      <Link>Sensors\SensorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\Sensors\SensorEvent.cs">
+      <Link>Sensors\SensorEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\SensorType.cs">
+      <Link>Core\SensorType.cs</Link>
+    </Compile>
+    <Compile Include="..\Mindstorms.Net.Core\WriteResponse.cs">
+      <Link>Core\WriteResponse.cs</Link>
+    </Compile>
+    <Compile Include="BluetoothCommunication.cs" />
+    <Compile Include="ComHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Actors\" />
+    <Folder Include="Sensors\Hitechnic\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

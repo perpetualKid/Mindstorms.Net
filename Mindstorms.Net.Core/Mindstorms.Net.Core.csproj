@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0C604DC-D161-4FD8-A645-79D3E9636AC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mindstorms.Net.Core</RootNamespace>
+    <AssemblyName>Mindstorms.Net.Core</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>%24/Mindstorms/Mindstorms.Net/Mindstorms.Net.Core</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://azuros.visualstudio.com/defaultcollection</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CommandsBase.cs" />
+    <Compile Include="Commands\ConnectionCommands.cs" />
+    <Compile Include="Commands\ConnectionCommandsInternal.cs" />
+    <Compile Include="Commands\DirectCommands.cs" />
+    <Compile Include="Commands\DirectCommandsInternal.cs" />
+    <Compile Include="Commands\SystemCommands.cs" />
+    <Compile Include="Commands\SystemCommandsInternal.cs" />
+    <Compile Include="FileTypeExtension.cs" />
+    <Compile Include="FindFileResponse.cs" />
+    <Compile Include="GetDeviceInfoResponse.cs" />
+    <Compile Include="GetFirmwareVersionResponse.cs" />
+    <Compile Include="GetInputValuesResponse.cs" />
+    <Compile Include="GetOutputStateResponse.cs" />
+    <Compile Include="Interfaces\ICommunication.cs" />
+    <Compile Include="Interfaces\IPollable.cs" />
+    <Compile Include="LowSpeedReadResponse.cs" />
+    <Compile Include="MessageReadResponse.cs" />
+    <Compile Include="MotorRegulationMode.cs" />
+    <Compile Include="MotorRunState.cs" />
+    <Compile Include="OpenDataAppendResponse.cs" />
+    <Compile Include="OpenReadResponse.cs" />
+    <Compile Include="PollCommandBuffer.cs" />
+    <Compile Include="PollCommandLengthResponse.cs" />
+    <Compile Include="PollCommandResponse.cs" />
+    <Compile Include="ReadResponse.cs" />
+    <Compile Include="RequestTelegram.cs" />
+    <Compile Include="NxtCommands.cs" />
+    <Compile Include="CommandType.cs" />
+    <Compile Include="Error.cs" />
+    <Compile Include="MotorModes.cs" />
+    <Compile Include="MotorPort.cs" />
+    <Compile Include="NxtBrick.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResponseBase.cs" />
+    <Compile Include="ResponseReceivedEventArgs.cs" />
+    <Compile Include="ResponseTelegram.cs" />
+    <Compile Include="SensorMode.cs" />
+    <Compile Include="SensorPort.cs" />
+    <Compile Include="Sensors\NoSensor.cs" />
+    <Compile Include="Sensors\Nxt\ColorChangedEventArgs.cs" />
+    <Compile Include="Sensors\Nxt\SensorColor.cs" />
+    <Compile Include="Sensors\Nxt\ColorSensor.cs" />
+    <Compile Include="Sensors\Nxt\ColorSensorMode.cs" />
+    <Compile Include="Sensors\DigitalSensor.cs" />
+    <Compile Include="Sensors\SensorBase.cs" />
+    <Compile Include="Sensors\SensorEvent.cs" />
+    <Compile Include="Sensors\Nxt\TouchSensor.cs" />
+    <Compile Include="Sensors\Nxt\UltraSonicSensor.cs" />
+    <Compile Include="SensorType.cs" />
+    <Compile Include="WriteResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sensors\Hitechnic\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
