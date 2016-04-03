@@ -665,7 +665,12 @@ namespace Mindstorms.Net.Test.Console
 			nxtBrick.DetachSensorAsync((SensorPort)port);
 		}
 
-		public static void GetColor(int port)
+        private static void button_OnChanged(object sender, object e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void GetColor(int port)
 		{
 			ColorSensor colorSensor = new ColorSensor();
 			nxtBrick.AttachSensorAsync((SensorPort)port, colorSensor).Wait();

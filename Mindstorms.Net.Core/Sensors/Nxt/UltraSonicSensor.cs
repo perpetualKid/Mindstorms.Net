@@ -386,20 +386,20 @@ namespace Mindstorms.Net.Core.Sensors.Nxt
 
 		public byte TriggerDistance { get; set; }
 
-		public event EventHandler OnObjectDetected;
+		public event EventHandler<SensorEventArgs> OnObjectDetected;
 
-		public event EventHandler OnObjectLost;
+		public event EventHandler<SensorEventArgs> OnObjectLost;
 
 		private void OnObjectDetectedEventHandler()
 		{
 			if (null != OnObjectDetected)
-				Task.Run(() => OnObjectDetected(this, new EventArgs()));
+				Task.Run(() => OnObjectDetected(this, new SensorEventArgs()));
 		}
 
 		private void OnObjectLostEventHandler()
 		{
 			if (null != OnObjectLost)
-				Task.Run(() => OnObjectLost(this, new EventArgs()));
+				Task.Run(() => OnObjectLost(this, new SensorEventArgs()));
 		}
 
 		internal override async Task PollAsyncInternal()

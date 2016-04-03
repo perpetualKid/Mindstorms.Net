@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mindstorms.Net.Core.Sensors;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace Mindstorms.Net.Core.Interfaces
 
 		void AutoPoll(int interval);
 
-		event EventHandler OnChanged;
+		event EventHandler<SensorEventArgs> OnChanged;
 
 	}
 }

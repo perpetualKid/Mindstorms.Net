@@ -102,12 +102,12 @@ namespace Mindstorms.Net.Core.Sensors
 			await Task.Yield();
 		}
 
-		public event EventHandler OnChanged;
+		public event EventHandler<SensorEventArgs> OnChanged;
 
 		protected virtual void OnChangedEventHandler()
 		{
 			if (null != OnChanged)
-				Task.Run(() => OnChanged(this, new EventArgs()));
+				Task.Run(() => OnChanged(this, new SensorEventArgs()));
 		}
 
 		public void AutoPoll(int interval)

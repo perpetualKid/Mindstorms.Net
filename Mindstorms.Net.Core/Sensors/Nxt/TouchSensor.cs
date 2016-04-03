@@ -20,20 +20,20 @@ namespace Mindstorms.Net.Core.Sensors.Nxt
 			get { return this.state != null ? this.state.AsBoolean : false; }
 		}
 
-		public event EventHandler OnPressed;
+		public event EventHandler<SensorEventArgs> OnPressed;
 
-		public event EventHandler OnReleased;
+		public event EventHandler<SensorEventArgs> OnReleased;
 
 		private void OnPressedEventHandler()
 		{
 			if (null != OnPressed)
-				Task.Run(() => OnPressed(this, new EventArgs()));
+				Task.Run(() => OnPressed(this, new SensorEventArgs()));
 		}
 
 		private void OnReleasedEventHandler()
 		{
 			if (null != OnReleased)
-				Task.Run(() => OnReleased(this, new EventArgs()));
+				Task.Run(() => OnReleased(this, new SensorEventArgs()));
 		}
 
 		internal override async Task PollAsyncInternal()
